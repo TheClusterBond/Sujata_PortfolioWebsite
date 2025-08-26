@@ -58,7 +58,8 @@ h6 {
     align-items: center;
     color:#830904;
     padding: 0 16px;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
     
 
       @media (max-width: 700px)
@@ -108,12 +109,14 @@ h6 {
                 }
 
                 .active {
-                    background-color: #14A1E8;
+                  color: #d32f2f;
+                  border-bottom: 2px solid #d32f2f;
                 }
             }
 
             & :hover {
-                background-color: #14A1E8;
+              color: #b71c1c;
+              border-bottom: 2px solid #b71c1c;
             }
 
 
@@ -139,7 +142,7 @@ h6 {
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    width: 100%;
     min-width: 100%;
     object-fit: cover;
       z-index: 2;
