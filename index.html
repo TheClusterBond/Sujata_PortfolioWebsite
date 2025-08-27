@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
     <title> Sujata Mandal</title>
      <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,46 +14,44 @@
     <div class="wrapper">
         <div class="loader">
 
-            <div class="navbar">
-                <image class="logo" src="assets/logo.png"></image>
+          <div class="navbar">
+                <a href="#home"><image class="logo" src="assets/logo.png"></image></a>
                 <div class="links">
                     <ul>
-                        <li>Home</li>
-                        <li>About Me</li>
-                        <li>Gallery</li>
-                        <li>Services</li>
-                        <li>Contact Us</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#myServices">Services</a></li>
+                        <li><a href="#contactUs">Contact Us</a></li>
                     </ul>
                 </div>
-            </div>
+          </div>
 
-            <div class="home">
+          <div class="home" id="home">
                 <video  src="assets/intro video.mp4"
                         autoPlay
                         muted
                         loop></video>
-            </div>
+          </div>
 
-            <div class="aboutMe">
+          <div class="aboutMe" id="aboutMe">
                 <image class="img1" src="assets/DESIGN copy.png"></image>
                 <div class="mainImg">
                     <image class="img2" src="assets/self intro.png"></image>
                 </div>
                 <image class="img3" src="assets/design.png"></image>
-            </div>
+          </div>
 
-            <div class="gallery">
+          <div class="gallery" id="gallery">
               <image src="assets/carousal front.png" class="carouselImage"></image>
               <image src="assets/white_version_filled (1).png" class="effect1"></image>
               <image src="assets/white_version_filled (1).png" class="effect1"></image>
-            </div>
+          </div>
 
-
-
-            <div class="myServices">
+          <div class="myServices" id="myServices">
                 <div class="upper">
                     <image class="serviceImg" src="assets/DESIGN copy.png"></image>
-                    <!-- <p class="serviceText">My<br>Services</p> -->
+                    <p class="serviceText">My<br>Services</p>
                 </div>
             <div class="cards">
                 <input type="radio" id="radio-1" name="radio-card" checked>
@@ -159,38 +158,66 @@
                                 </div>
                             </article>
                 </div> 
+          </div>
+
+          <!-- <div class="choose">
+            <div class="choose-left">
+              <div class="text-rotator">
+                <div class="text-item gold active">
+                  <h2>Personalized Experience</h2>
+                  <p>Flexible packages and a collaborative process to match your needs and preferences.</p>
+                </div>
+                <div class="text-item blue">
+                  <h2>Storytelling with Emotion</h2>
+                  <p>Images that blend candid moments with timeless style, ensuring your memories are preserved authentically.</p>
+                </div>
+                <div class="text-item brown">
+                  <h2>Distinctive Artistic Approach</h2>
+                  <p>Every project is handled with a unique creative vision and attention to detail.</p>
+                </div>
+                <div class="text-item red">
+                  <h2>High-Quality Results</h2>
+                  <p>Commitment to delivering sharp, beautifully edited photographs that stand the test of time.</p>
+                </div>
+              </div>
             </div>
+            <div class="choose-right">
 
-  <div class="contactWrapper">
-    <div class="contact-card">
-      <!-- Left Side -->
-      <div class="contact-left">
-        <img src="assets/logo.png" class="logo2">
-        <h2>LET’S <br> GET IN <br> TOUCH</h2>
-        <div class="contact-info">
-          <p>📧 sujatamandal198@gmail.com</p>
-          <p>📞 9330210062</p>
+            </div>
+          </div> -->
+
+  <div class="contactWrapper" id="contactUs">
+    <div class="wrapp">
+      <div class="contact-card">
+        <!-- Left Side -->
+        <div class="contact-left">
+          <img src="assets/LOGO-1.png" class="logo2">
+          <h2>Let's <br><span class="span-1"> Get in</span><br><span class="span-2">Touch</span></h2>
+          <div class="contact-info" >
+            <div style="display: flex; align-items: center; gap: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0  1.1.9 2 2 2h16c1.1 0 2-.9  2-2V6c0-1.1-.9-2-2-2zm0  4l-8 5-8-5V6l8 5 8-5v2z"/></svg><p>sujatamandal198@gmail.com</p></div>
+            <div style="display: flex; align-items: center; gap: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59   6.59l2.2-2.2a1 1 0 011.05-.24c1.12.37   2.33.57 3.54.57.55 0 1 .45 1   1V20c0 .55-.45 1-1 1C10.85 21 3   13.15 3 4c0-.55.45-1 1-1h3.5c.55   0 1 .45 1 1 0 1.21.2 2.42.57  3.54.09.35.03.74-.24 1.05l-2.2 2.2z"/></svg><p>9330210062</p></div>
+          </div>
         </div>
-      </div>
 
-      <!-- Right Side (Form) -->
-      <div class="contact-right">
-        <form id="contact-form">
-          <label>FULL NAME</label>
-          <input type="text" name="name" placeholder="Your Name" required>
+        <!-- Right Side (Form) -->
+        <div class="contact-right">
+          <form id="contact-form">
+            <label>FULL NAME</label>
+            <input type="text" name="name" placeholder="Your Name" required>
 
-          <label>EMAIL</label>
-          <input type="email" name="email" placeholder="Your Email" required>
+            <label>EMAIL</label>
+            <input type="email" name="email" placeholder="Your Email" required>
 
-          <label>PHONE</label>
-          <input type="text" name="phone" placeholder="Your Phone">
+            <label>PHONE</label>
+            <input type="text" name="phone" placeholder="Your Phone">
 
-          <label>MESSAGE</label>
-          <textarea name="message" placeholder="Write your message" required></textarea>
+            <label>MESSAGE</label>
+            <textarea name="message" placeholder="Write your message" required></textarea>
 
-          <button type="submit">➜</button>
-        </form>
-        <p class="note">Fill out the form below and we’ll get back to you as soon as possible</p>
+            <button type="submit">➜</button>
+          </form>
+          <p class="note">Fill out the form below and we'll get back to you as soon as possible</p>
+        </div>
       </div>
     </div>
   </div>

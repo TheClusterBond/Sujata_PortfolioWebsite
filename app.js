@@ -9,3 +9,13 @@
           alert("❌ Failed to send. Error: " + JSON.stringify(error));
         });
     });
+
+
+     const items = document.querySelectorAll('.text-item');
+    let current = 0;
+
+    setInterval(() => {
+      items[current].classList.remove('active');
+      current = (current + 1) % items.length;
+      items[current].classList.add('active');
+    }, 2000); // 2 seconds
