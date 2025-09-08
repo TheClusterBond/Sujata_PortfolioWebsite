@@ -661,6 +661,12 @@ footer
   gap:15px;
   display: flex;
   padding-top:40px;
+
+  @media (max-width:550px)
+  {
+    justify-content: center;
+  }
+
     img{
           @media (max-width: 700px)
           {
@@ -677,6 +683,12 @@ footer
   {
      padding-top: 15px;
   }
+
+  @media (max-width:550px)
+  {
+    justify-content: center;
+  }
+  
   img{
           @media (max-width: 700px)
           {
@@ -688,11 +700,24 @@ footer
   gap:15px;
   display: flex;
   padding-top:30px;
+
+  h4{
+    @media (max-width:320px)
+    {
+      font-size: 10px;
+    }
+  }
   }
    .smaller4{
   gap:15px;
   display: flex;
   padding-top:30px;
+
+  @media (max-width:550px)
+  {
+    justify-content: center;
+  }
+
     img{
           @media (max-width: 900px)
           {
@@ -927,21 +952,81 @@ footer
       display: flex;
       margin-top:150px;
       padding-left: 10%;
+      width: 100vw;
+      position: relative;
+      flex-wrap: nowrap;
+      justify-content: space-around; 
+      align-items: center;
     }
 
-    .choose-left{
 
-    }
+    @media (max-width: 900px) {
+  .choose {
+    flex-wrap: wrap-reverse;
+    padding-left: 0; /* optional, for centering on small screens */
+    justify-content: center; /* optional */
+    align-items: center;
+  }
+
+  .choose-right .chooseText {
+    font-size: 50px; /* adjust size on smaller screens */
+    padding-left: 0;
+  }
+
+  .choose-left{
+    padding-top:80px;
+    padding-bottom: 50px;
+  }
+}
+
+
+
+
+  .choose-left{
+    width:600px;
+  }
 
     .choose-right{
-
+      .chooseText{
+    font-family:Cinzel Decorative;
+    font-weight:bolder;
+    font-style: Regular;
+    font-size: 80px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color:#BF6C28;
+    padding-left:50px;
+    
+    @media (max-width:935px)
+    {
+      font-size:60px;
+      padding-left: 0px;
+    }
+    @media (max-width:650px)
+    {
+      font-size:50px;
+      padding-left: 0px;
+    }
+    @media (max-width:550px)
+    {
+      font-size:40px;
+    }
+    @media (max-width:440px)
+    {
+      font-size:30px;
+    }
     }
 
+    img{
+      position: absolute;
+    }
+  }
+
     .text-rotator {
-      position: relative;
-      width: 470px;
-      height: 150px;
-      overflow: hidden;
+   position: relative;
+  max-width: 100%; /* instead of fixed 470px */
+  width: 100%;
+  height: auto; 
     }
 
     .text-item {
@@ -955,7 +1040,7 @@ footer
         font-family: sans-serif;
         font-weight: 700;
         font-style: Bold;
-        font-size: 28px;
+        font-size: 38px;
         margin: 0;
       }
 
