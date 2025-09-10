@@ -18,4 +18,39 @@
       items[current].classList.remove('active');
       current = (current + 1) % items.length;
       items[current].classList.add('active');
-    }, 2000); // 2 seconds
+    }, 3000);
+
+
+
+
+  window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section = document.querySelector(".section-slides");
+    const slidesContainer = document.querySelector(".slides");
+
+    gsap.to(slidesContainer, {
+      x: () => -(slidesContainer.scrollWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `+=${slidesContainer.scrollWidth - window.innerWidth}`,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+  });
+
+
+
+  const loader = document.getElementById("loader");
+    const content = document.getElementById("content");
+    const video = document.getElementById("mainVideo");
+
+    video.addEventListener("loadeddata", () => {
+      loader.classList.add("hidden");
+      content.classList.add("visible");
+    });

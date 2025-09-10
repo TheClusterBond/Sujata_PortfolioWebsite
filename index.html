@@ -7,13 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <title> Sujata Mandal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="loader">
+      <div id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text">Loading...</div>
+      </div>
 
+      <div id="content">
           <div class="navbar">
                 <a href="#home"><image class="logo" src="assets/logo.png"></image></a>
                 <div class="links">
@@ -28,7 +35,7 @@
           </div>
 
           <div class="home" id="home">
-                <video  src="assets/intro video.mp4"
+                <video  src="assets/intro video.mp4" id="mainVideo"
                         autoPlay
                         muted
                         loop></video>
@@ -42,11 +49,19 @@
                 <image class="img3" src="assets/design.png"></image>
           </div>
 
-          <div class="gallery" id="gallery">
-              <image src="assets/carousal front.png" class="carouselImage"></image>
-              <image src="assets/white_version_filled (1).png" class="effect1"></image>
-              <image src="assets/white_version_filled (1).png" class="effect1"></image>
-          </div>
+          <section class="section-slides" id="gallery">
+            <!-- Background -->
+            <img class="top-img" src="assets/carousal back.png" alt="background" />
+
+            <!-- Foreground slides -->
+            <div class="slides">
+              <div class="slide"><img class="bot-img" src="assets/1.png" alt="Slide 1" /></div>
+              <div class="slide"><img class="bot-img" src="assets/2.png" alt="Slide 2" /></div>
+              <div class="slide"><img class="bot-img" src="assets/3.png" alt="Slide 3" /></div>
+              <div class="slide"><img class="bot-img" src="assets/4.png" alt="Slide 4" /></div>
+              <div class="slide"><img class="bot-img" src="assets/6.png" alt="Slide 5" /></div>
+            </div>
+          </section>
 
           <div class="myServices" id="myServices">
                 <div class="upper">
@@ -246,8 +261,8 @@
                     <div class="follow">
                         <p>FOLLOW US</p>
                         <div class="smaller4">
-                            <image src="assets/insta icon.png"></image>
-                            <image src="assets/linkdin icon.png"></image>
+                            <a href="https://www.instagram.com/photographer_suzi_?igsh=Yzl1YWoxZjA2Nzgx" target="_blank"><image src="assets/insta icon.png"></image></a>
+                            <a href=""><image src="assets/linkdin icon.png"></image></a>
                         </div>
                     </div>
                 </div>
@@ -255,12 +270,12 @@
                     <image src="assets/lowerImage.png" class="footerImage"></image>
                 </div>
           </div>
-
-        </div>
+      </div>
     </div>
 
-    <script src="app.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
      <script>
     (function(){
