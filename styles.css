@@ -1022,6 +1022,13 @@ input:checked +.card > .card-img{
   }
 }
 
+@media (max-width: 500px) {
+  .choose-left{
+    padding-bottom: 80px;
+  }
+}
+
+
     .section-slides {
   position: relative;
   height: 100vh;
